@@ -23,6 +23,12 @@ document.getElementById('past').onclick = function() {
       images = 28
     } 
     document.getElementById('image').style='background-image: url(image'+images+'.jpg);'
-
+    
 }
 
+function sendEmail() {
+    const subject = document.getElementById("subjectInput").value;
+    const email = "nver9383@gmail.com"; 
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}`;
+    window.open(mailtoLink, '_blank');
+}
